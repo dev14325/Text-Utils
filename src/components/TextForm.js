@@ -19,6 +19,23 @@ export default function TextForm(props) {
         setText(newText)
     }
 
+    const handlerevClick = (event) =>{
+        let splitString = text.split("");
+        let revArray = splitString.reverse();
+        let joinString = revArray.join("");
+        setText(joinString);
+    }
+    const downloadTxtFile = () => {
+        const element = document.createElement("a");
+        const file = new Blob([text], {
+          type: "text/plain"
+        });
+        element.href = URL.createObjectURL(file);
+        element.download = "myFile.txt";
+        element.click();
+}
+
+
 
     const handleOnChange = (event) =>{
         console.log("On Change")
@@ -37,6 +54,8 @@ export default function TextForm(props) {
   <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Upper Case</button>
   <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lower Case</button>
   <button className="btn btn-primary mx-2" onClick={handleclearClick}>Clear</button>
+  <button className="btn btn-primary mx-2" onClick={handlerevClick}>Reverse the Text</button>
+  <button className='btn btn-primary mx-2' onClick={downloadTxtFile}>Download File</button>
 </div>
       
     </div>
