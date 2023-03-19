@@ -34,11 +34,11 @@ export default function Navbar(props) {
 
 Navbar.propTypes ={
     title : PropTypes.string.isRequired,
-    aboutTextUtils :  PropTypes.string
+    aboutTextUtils :  PropTypes.string.isRequired
 }
 
-Navbar.defaultProps= {
-    title :  'kuch bhi',
-    aboutTextUtils : 'about'
+// Navbar.defaultProps= {
+//     title :  'kuch bhi',
+//     aboutTextUtils : 'about'
 
-}
+// }
