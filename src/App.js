@@ -10,7 +10,8 @@ function App() {
   return (
    <> 
  
-<Navbar title = "textUtils" aboutTextUtils = "about us"/>
+{/* <Navbar title = "textUtils" aboutTextUtils = "about us"/> */}
+<Navbar/>
    </>
   );
 }
