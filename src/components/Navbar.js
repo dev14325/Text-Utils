@@ -25,10 +25,16 @@ export default function Navbar(props) {
       
     </div>
   </div>
+  <div className="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
   <div className={`form-check form-switch text-${props.mode==='light'?'dark' : 'light'}`}>
   <input className="form-check-input" onClick={props.toggle} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
 </div>
+
+
 </nav>
 
    

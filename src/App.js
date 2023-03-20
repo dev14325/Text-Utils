@@ -27,13 +27,13 @@ function App() {
   return (
    <> 
  
-<Navbar title = "textUtils" mode= {mode} toggle = {toggleMode} aboutTextUtils = "About us"/>
+<Navbar title = "textUtils" mode= {mode} toggle = {toggleMode} aboutTextUtils = "About us"/> 
 <div className="container my-3" >
   <TextForm heading = "Enter text below to analyze" mode= {mode} />
   {/* <About/> */}
 </div>
 
-<Navbar/>
+
    </>
   );
 }
