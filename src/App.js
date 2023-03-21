@@ -21,17 +21,23 @@ function App() {
     msg : message,
     type : type
    })
+   setTimeout(() => {
+    setAlert(null);
+    
+   }, 1500);
   }
   const toggleMode = () =>{
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled ","succeed")
+      document.title = 'TextUtils -Dark Mode'
     }
     else{
       setMode('light')
       document.body.style.backgroundColor = 'black';
       showAlert("Light mode has been enabled ","succeed")
+      document.title = 'TextUtils - Light Mode'
     }
   }
  
