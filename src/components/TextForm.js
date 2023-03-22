@@ -54,11 +54,11 @@ export default function TextForm(props) {
   
   <textarea className="form-control"  value = {text} onChange={handleOnChange} style={{backgroundColor : props.mode==='dark'?'rgb(89 90 167)' : 'white',color : props.mode==='dark'?'white' : '#042743'}} id="exampleFormControlTextarea1" rows="8"> </textarea>
  </div>
-  <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Convert to Upper Case</button>
-  <button className="btn btn-primary mx-2 my-1" onClick={handleLoClick}>Convert to Lower Case</button>
-  <button className="btn btn-primary mx-2 my-1" onClick={handleclearClick}>Clear</button>
-  <button className="btn btn-primary mx-2 my-1" onClick={handlerevClick}>Reverse the Text</button>
-  <button className='btn btn-primary mx-2 my-1' onClick={downloadTxtFile}>Download </button>
+  <button disabled = {text.length===0}  className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Convert to Upper Case</button>
+  <button disabled = {text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleLoClick}>Convert to Lower Case</button>
+  <button disabled = {text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleclearClick}>Clear</button>
+  <button disabled = {text.length===0} className="btn btn-primary mx-2 my-1" onClick={handlerevClick}>Reverse the Text</button>
+  <button disabled = {text.length===0} className='btn btn-primary mx-2 my-1' onClick={downloadTxtFile}>Download </button>
 
       
     </div>
