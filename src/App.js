@@ -51,14 +51,14 @@ function App() {
  
   return (
    <> 
-   {/* <Router>
+   <Router>
  
    <Navbar title = "textUtils" aboutTextUtils='about'  mode= {mode} toggle = {toggleMode} />
 <Alert alert = {alert}/> 
 <div className="container my-3" >
 <Routes>
 
-          <Route exact path="/about" element = {<About/>}>
+          <Route exact path="/about" element = {<About mode= {mode} />}>
            
            </Route>
           
@@ -73,15 +73,10 @@ function App() {
  
 </div>
  {/* <About/> */}
- {/* </Router>  */} */}
+ </Router> 
 
  
- <Navbar title = "textUtils" aboutTextUtils='about'  mode= {mode} toggle = {toggleMode} />
-   <Alert alert = {alert}/> 
-   <div className="container my-3" >
 
-   </div>
-<TextForm heading = "Enter text below to analyze" showAlert= {showAlert} mode= {mode} />
    </>
   );
 }
