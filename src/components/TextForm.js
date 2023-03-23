@@ -40,6 +40,12 @@ export default function TextForm(props) {
 
 
 
+const handlecopyText = (event)=>{
+  navigator.clipboard.writeText(text);
+  props.showAlert("Copied to Clipboard","success");
+}
+
+
     const handleOnChange = (event) =>{
         console.log("On Change")
         setText(event.target.value)
@@ -59,7 +65,7 @@ export default function TextForm(props) {
   <button disabled = {text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleclearClick}>Clear</button>
   <button disabled = {text.length===0} className="btn btn-primary mx-2 my-1" onClick={handlerevClick}>Reverse the Text</button>
   <button disabled = {text.length===0} className='btn btn-primary mx-2 my-1' onClick={downloadTxtFile}>Download </button>
-
+  <button disabled = {text.length===0} className='btn btn-primary mx-2 my-1' onClick={handlecopyText}>Copy text </button>
       
     </div>
 
